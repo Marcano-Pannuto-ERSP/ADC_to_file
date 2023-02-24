@@ -13,3 +13,5 @@ def one_minute():
         f.write(x)
     f.close()
     ser.close()
+
+one_minute()
