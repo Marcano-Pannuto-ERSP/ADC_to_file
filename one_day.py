@@ -8,12 +8,12 @@ def format_output(s):
     s = s.replace("\\r\\n", "\n")
     return s
 
-def one_minute():
+def one_day():
     ser = serial.Serial('/dev/ttyUSB0', 115200)  # open serial port Linux
     #ser = serial.Serial('COM6', 115200) # open serial port Windows
     initialTime = time.monotonic()
     currentTime = time.monotonic()
-    finalTime = currentTime + 60 # one minute
+    finalTime = currentTime + 86400 # one minute
     fileName = sys.argv[1]
     f = open(fileName, "x")
     
@@ -25,4 +25,4 @@ def one_minute():
     f.close()
     ser.close()
 
-one_minute()
+one_day()
