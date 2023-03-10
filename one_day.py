@@ -13,7 +13,7 @@ def one_day():
     #ser = serial.Serial('COM6', 115200) # open serial port Windows
     initialTime = time.monotonic()
     currentTime = time.monotonic()
-    finalTime = currentTime + 86400 # one minute
+    finalTime = currentTime + 86400 # one day
     fileName = sys.argv[1]
     f = open(fileName, "x")
     
